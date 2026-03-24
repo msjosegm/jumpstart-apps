@@ -5,7 +5,13 @@ metadata:
   namespace: bookstore
 rules:
 - apiGroups: [""] # "" indicates the core API group
-  resources: ["pods"]
+  resources: 
+  - "pods"
+  - "pods/log"
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["apps"] # "" indicates the core API group
+  resources: 
+  - "deployments"
   verbs: ["get", "watch", "list"]
 
 ---
