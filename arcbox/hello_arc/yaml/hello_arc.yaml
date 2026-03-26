@@ -34,3 +34,10 @@ spec:
         env:
         - name: MESSAGE
           value: This is an Azure Arc GitOps Demo!
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
